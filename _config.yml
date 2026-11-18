@@ -1,2 +1,7 @@
 title: "Java Roadmap: Noob to Secure Code Reviewer"
+description: "18 weeks from core Java to frameworks, deployment and secure code review."
 theme: jekyll-theme-cayman
+# The published site is English-only: index.md is the home page.
+# The root README.md (Hindi) is kept for GitHub and left out of the site.
+exclude:
+  - README.md

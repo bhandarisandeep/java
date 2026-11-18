@@ -1,11 +1,8 @@
----
-layout: default
-title: Java Roadmap — Noob से Secure Code Reviewer तक
----
-
 # Java Roadmap: Noob से Secure Code Reviewer तक
 
 18 हफ़्तों में Java के core concepts, frameworks (Spring, Jakarta EE), prod-ready deployment और फिर security code review सीखने का रास्ता। हर हफ़्ते का अपना folder है जिसमें notes, code samples और resources हैं।
+
+> **English version:** पूरा English index [index.md](index.md) में है, और यही Jekyll / GitHub Pages का home page है। हर हफ़्ते के notes English में ही लिखे जाते हैं।
 
 ## हर हफ़्ते का नियम: Security Corner
 
@@ -50,7 +47,8 @@ GUI (Swing/JavaFX), Android, Microservices, Design Patterns, Maven/Gradle गह
 
 ```
 .
-├── README.md            # यही index (Jekyll home page भी)
+├── index.md             # English index (Jekyll home page)
+├── README.md            # यही Hindi index (GitHub पर दिखता है)
 ├── _config.yml          # GitHub Pages / Jekyll config
 ├── weeks/
 │   └── week-01-setup-and-basics/
