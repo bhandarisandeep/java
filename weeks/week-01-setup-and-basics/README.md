@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /weeks/week-01-setup-and-basics/
 title: "Week 1 · Day 1 — How Java Runs, Hello World, Data Types"
 ---
 
