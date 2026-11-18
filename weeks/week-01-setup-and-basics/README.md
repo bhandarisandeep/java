@@ -15,11 +15,25 @@ title: "Week 1 · Day 1 — How Java Runs, Hello World, Data Types"
    ```
 2. If `javac` is missing, install a JDK (17 or 21 LTS), e.g. Eclipse Temurin from adoptium.net, and make sure `JAVA_HOME` is set and `bin` is on your `PATH`.
 3. Any editor works; IntelliJ IDEA Community is recommended.
-4. Run every sample from the `code/` folder:
+4. Run every sample from the [`code/`](https://github.com/bhandarisandeep/java/tree/main/weeks/week-01-setup-and-basics/code) folder:
    ```bash
    javac FileName.java
    java FileName
    ```
+
+---
+
+## Code Samples
+
+| File | What it shows |
+|---|---|
+| [`Hello.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/Hello.java) | The smallest Java program |
+| [`Args.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/Args.java) | Command-line arguments and handling bad input |
+| [`DataTypes.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/DataTypes.java) | All 8 primitives, their limits, and `null` |
+| [`ReferenceDemo.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/ReferenceDemo.java) | Value copy vs reference copy, String immutability |
+| [`OverflowDemo.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/OverflowDemo.java) | Silent integer overflow and `Math.multiplyExact` |
+| [`PasswordDemo.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/PasswordDemo.java) | `String` vs `char[]` for passwords |
+| [`Secrets.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/Secrets.java) | Hardcoded secrets vs environment variables |
 
 ---
 
@@ -52,14 +66,14 @@ title: "Week 1 · Day 1 — How Java Runs, Hello World, Data Types"
 
 ### 🔒 Security Corner
 
-- **Decompilation:** `.class` files can be easily turned back into readable code (e.g. with `javap -c` or decompilers like CFR/JD-GUI). Never hardcode passwords or API keys in code. See `code/Secrets.java`.
+- **Decompilation:** `.class` files can be easily turned back into readable code (e.g. with `javap -c` or decompilers like CFR/JD-GUI). Never hardcode passwords or API keys in code. See [`Secrets.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/Secrets.java).
 - **Vulnerable dependencies:** Maven may pull old, vulnerable library versions. Log4Shell (CVE-2021-44228, Log4j) is the classic example. Always review the dependency tree (`mvn dependency:tree`).
 
 ---
 
 ## 2. First Program: Hello World
 
-See `code/Hello.java`.
+See [`Hello.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/Hello.java).
 
 - Every piece of code lives inside a **class**.
 - A `public class` must have the **same name as the file**: `public class Hello` → `Hello.java`.
@@ -72,7 +86,7 @@ See `code/Hello.java`.
 
 ### Why `String[] args`?
 
-`args` holds **command-line arguments**. Running `java Args Sandeep 25` gives `args[0] = "Sandeep"` and `args[1] = "25"`. Everything from the command line arrives as text, so `"25"` must be converted with `Integer.parseInt`. See `code/Args.java`.
+`args` holds **command-line arguments**. Running `java Args Sandeep 25` gives `args[0] = "Sandeep"` and `args[1] = "25"`. Everything from the command line arrives as text, so `"25"` must be converted with `Integer.parseInt`. See [`Args.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/Args.java).
 
 ### 🔒 Security Corner
 
@@ -83,6 +97,8 @@ See `code/Hello.java`.
 ---
 
 ## 3. Data Types
+
+See [`DataTypes.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/DataTypes.java).
 
 ### Primitive types (8) — hold the value directly
 
@@ -109,7 +125,7 @@ See `code/Hello.java`.
 
 ### Value copy vs reference copy
 
-See `code/ReferenceDemo.java`.
+See [`ReferenceDemo.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/ReferenceDemo.java).
 
 - `int b = a;` copies the **value**. Changing `b` does not change `a`.
 - `int[] arr2 = arr1;` copies the **address**. Both point to the same array, so `arr2[0] = 99` also changes `arr1[0]`.
@@ -124,12 +140,12 @@ See `code/ReferenceDemo.java`.
 
 ### 🔒 Security Corner
 
-**1. Integer overflow** — see `code/OverflowDemo.java`
+**1. Integer overflow** — see [`OverflowDemo.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/OverflowDemo.java)
 - Going past `int`'s maximum **silently wraps** to a negative number. **No exception is thrown**, which is what makes it dangerous.
 - Example: `quantity * price` in a shopping app can become negative with a huge quantity.
 - Fix: `Math.multiplyExact` / `Math.addExact` deliberately throw `ArithmeticException` on overflow so you can catch it.
 
-**2. Passwords: `String` vs `char[]`** — see `code/PasswordDemo.java`
+**2. Passwords: `String` vs `char[]`** — see [`PasswordDemo.java`](https://github.com/bhandarisandeep/java/blob/main/weeks/week-01-setup-and-basics/code/PasswordDemo.java)
 - A password in a `String` cannot be wiped, because Strings are immutable. It stays in memory until GC clears it, and a **heap dump** in that window can reveal it.
 - A `char[]` is mutable. After use, overwrite it with `Arrays.fill(pwd, '\0')`, so a later dump shows empty characters.
 - Java's own APIs (e.g. `JPasswordField.getPassword()`, `Console.readPassword()`) return `char[]` for this reason.
