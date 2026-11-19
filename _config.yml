@@ -3,6 +3,7 @@ description: "18 weeks from core Java to frameworks, deployment and secure code 
 theme: jekyll-theme-cayman
 blog_url: "https://bhandarisandeep.com/"
 # The published site is English-only: index.md is the home page.
-# The root README.md (Hindi) is kept for GitHub and left out of the site.
+# The root README.md and the hindi/ notes are kept for GitHub only and left out of the site.
 exclude:
   - README.md
+  - hindi

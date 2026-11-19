@@ -121,12 +121,16 @@ Not required for the roadmap. Explore them if you have time, or skip them freely
 ├── index.md             # This page (English, the Jekyll / GitHub Pages home page)
 ├── README.md            # Hindi version of the index (shown on GitHub)
 ├── _config.yml          # GitHub Pages / Jekyll configuration
+├── _layouts/            # Page layout with roadmap and blog navigation
 ├── weeks/
 │   └── week-01-setup-and-basics/
-│       ├── README.md    # That week's notes, in English, with front matter
-│       ├── code/        # Runnable code samples
-│       └── resources.md # Links and artifacts
+│       ├── README.md    # Week overview: days and all code samples
+│       ├── day-01/      # One folder of English notes per day
+│       ├── day-02/
+│       ├── day-03/
+│       └── code/        # Runnable code samples for the week
 ├── secure-java/         # All Security Corners collected in one place
+├── hindi/               # Hindi notes for personal use (GitHub only, not on the site)
 ├── misc/                # Optional topics
 └── assets/              # Images and diagrams
 ```

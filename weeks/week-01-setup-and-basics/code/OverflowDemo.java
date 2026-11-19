@@ -1,9 +1,9 @@
 public class OverflowDemo {
     public static void main(String[] args) {
-        int quantity = 50_000_000;
+        int quantity = 30_000_000;
         int price = 100;
 
-        // VULNERABLE: silently wraps to a negative number, no exception
+        // VULNERABLE: 3,000,000,000 does not fit in an int; it silently wraps to a negative number, no exception
         int total = quantity * price;
         System.out.println("Unsafe total = " + total);
 

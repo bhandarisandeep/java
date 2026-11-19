@@ -2,7 +2,7 @@
 
 18 हफ़्तों में Java के core concepts, frameworks (Spring, Jakarta EE), prod-ready deployment और फिर security code review सीखने का रास्ता। हर हफ़्ते का अपना folder है जिसमें notes, code samples और resources हैं।
 
-> **English version:** पूरा English index [index.md](index.md) में है, और यही Jekyll / GitHub Pages का home page है। हर हफ़्ते के notes English में ही लिखे जाते हैं।
+> **English version:** पूरा English index [index.md](index.md) में है, और यही Jekyll / GitHub Pages का home page है। हर दिन के notes English में website के लिए, और हिंदी में [hindi/](hindi/) folder में आपके निजी इस्तेमाल के लिए रखे जाते हैं।
 
 ## हर हफ़्ते का नियम: Security Corner
 
@@ -50,12 +50,16 @@ GUI (Swing/JavaFX), Android, Microservices, Design Patterns, Maven/Gradle गह
 ├── index.md             # English index (Jekyll home page)
 ├── README.md            # यही Hindi index (GitHub पर दिखता है)
 ├── _config.yml          # GitHub Pages / Jekyll config
+├── _layouts/            # Website का layout (roadmap और blog के links)
 ├── weeks/
 │   └── week-01-setup-and-basics/
-│       ├── README.md    # उस हफ़्ते के notes (front matter के साथ)
-│       ├── code/        # code samples (Maven project)
-│       └── resources.md # links, artifacts
+│       ├── README.md    # हफ़्ते का overview: सारे days और code samples
+│       ├── day-01/      # हर दिन के English notes का अलग folder
+│       ├── day-02/
+│       ├── day-03/
+│       └── code/        # उस हफ़्ते के code samples
 ├── secure-java/         # सारे Security Corners का संग्रह
+├── hindi/               # हिंदी notes, निजी इस्तेमाल के लिए (website पर नहीं)
 ├── misc/
 └── assets/              # images, diagrams
 ```
