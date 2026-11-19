@@ -46,7 +46,7 @@ int[] empty  = new int[3];              // with a size
 - **Indexes start at 0.** For size 5 the indexes are 0–4; for size 10 they are 0–9. The last index is always `length - 1`.
 - **Length:** `arr.length`, with **no brackets** (unlike `String.length()`).
 - **Default values** when created with a size: `0` for numbers, `false` for `boolean`, `null` for `String` and other objects.
-- **Multi-dimensional arrays** are arrays of arrays, e.g. a table: `int[][] table = {{1,2,3},{4,5,6}}`.
+- **Multi-dimensional arrays** are arrays of arrays, e.g. a table: `int[][] table = { {1, 2, 3}, {4, 5, 6} }`.
 
 > **Note:** An array is not a `List`. In Java, `List` is a separate interface covered in Week 3.
 

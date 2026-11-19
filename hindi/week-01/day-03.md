@@ -28,7 +28,7 @@ int[] empty  = new int[3];              // size देकर
 - **Index 0 से शुरू।** Size 5 हो तो index 0–4, size 10 हो तो 0–9। आख़िरी index हमेशा `length - 1`।
 - **Length:** `arr.length`, **बिना brackets** के (String के `length()` से उलट)।
 - **Default values** (size देकर बनाने पर): numbers के लिए `0`, `boolean` के लिए `false`, String और objects के लिए `null`।
-- **Multi-dimensional:** array के अंदर array, जैसे table: `int[][] table = {{1,2,3},{4,5,6}}`।
+- **Multi-dimensional:** array के अंदर array, जैसे table: `int[][] table = { {1, 2, 3}, {4, 5, 6} }`।
 
 > **Note:** Array को "list" मत कहिए। Java में `List` अलग चीज़ है, Week 3 में आएगी।
 
